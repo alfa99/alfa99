@@ -1,0 +1,23 @@
+import urllib2
+import re
+import sys
+import bs4
+from bs4 import BeautifulSoup
+
+url='http://www.bjcyh.com.cn'
+content = urllib2.urlopen(url).read()
+soup = BeautifulSoup(content,"lxml")
+
+p50t = soup.find('div', {'class':'anyClass'})
+p50 = p50t.text
+
+sys.p50 = open("p50.txt", "w")
+
+
+print p50
+
+
+
+
+
+input("Done....")
